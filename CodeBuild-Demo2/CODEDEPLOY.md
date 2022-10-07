@@ -9,6 +9,7 @@ chmod +x ./install
 sudo ./install auto
 sudo service codedeploy-agent status
 ```
+# Create EC2 with CodeDeploy Access
 
 
 # create a bucket and enable versioning
