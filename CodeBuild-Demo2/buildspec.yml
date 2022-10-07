@@ -1,0 +1,25 @@
+version: 0.2
+
+phases: 
+    install:
+        runtime-versions:
+            nodejs: 16
+        commands:
+            - echo "installing something"
+            - printenv
+    pre_build:
+        commands: 
+            - echo "we are in the pre build phase"
+    build:
+        commands:
+            - echo "we are in the build block"
+            - echo "we will run some tests"
+            - grep -Fq "Congratulations" index.html
+    post_build:
+        commands:
+            - echo "we are in the post build phase"
+            
+artifacts:
+  files:
+    - '**/*'
+    - name:my-webpage-artifacts
