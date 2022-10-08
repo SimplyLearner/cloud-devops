@@ -9,7 +9,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       AvailabilityZone: ap-south-1a
-      ImageId: ami-009d6802948d06e52
+      ImageId: ami-01216e7612243e0ef
       InstanceType: t2.micro
       SecurityGroups:
         - !Ref SSHSecurityGroup

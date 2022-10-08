@@ -1,6 +1,8 @@
 # 0) Install the eb cli
 ```
-pip install awsebcli --user
+brew update
+brew install awsebcli
+eb --version
 ```
 
 # 1) Create a project
