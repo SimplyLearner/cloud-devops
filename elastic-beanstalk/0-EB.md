@@ -1,4 +1,5 @@
 # 0) Install the eb cli
+- https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html
 ```
 brew update
 brew install awsebcli

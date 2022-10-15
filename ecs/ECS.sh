@@ -11,4 +11,4 @@ docker tag demo-ecr:latest 957695831863.dkr.ecr.ap-south-1.amazonaws.com/demo-ec
 docker push 957695831863.dkr.ecr.ap-south-1.amazonaws.com/demo-ecr:latest
 
 # pull image
-docker pull  957695831863.dkr.ecr.ap-south-1.amazonaws.com/demo-ecr:latest
+docker pull 957695831863.dkr.ecr.ap-south-1.amazonaws.com/demo-ecr:latest
