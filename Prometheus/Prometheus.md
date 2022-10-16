@@ -1,5 +1,6 @@
 #Installation Steps for Prometheus
 - Launch an EC2 instance with Ubuntu and run the below commands
+- Open the traffic for all the ports
 
 ```
 sudo su -
@@ -33,7 +34,8 @@ vim /etc/prometheus/prometheus.yml
     scrape_interval: 5s
     static_configs:
       - targets: ['localhost:9100']
-kill -HUP reload prometheus
+
+
 ```
 
 
@@ -43,6 +45,21 @@ localhost:3000 --> grafana
 curl localhost:9100 --> node exporter
 curl localhost:9100/metrics
 ```
+
+scripts/install-docker.sh
+cd flask-prometheus
+docker-compose up -d
+
+
+localhost:5000 --> Flask server
+localhost:5000/query --> query
+localhost:8000 --> monitoring
+
+#Run the script
+add-flask-app.sh
+
+
+# Extra Suggested Activity
 
 
 - setup Alert manager
@@ -89,16 +106,7 @@ service prometheus status
 
 
 ```
-scripts/install-docker.sh
-docker-compose up -d
 
-
-localhost:5000 --> Flask server
-localhost:5000/query --> query
-localhost:8000 --> monitoring
-
-#Run the script
-add-flask-app.sh
 
 ```
 
