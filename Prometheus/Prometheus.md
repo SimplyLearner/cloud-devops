@@ -64,6 +64,8 @@ add-flask-app.sh
 
 - setup Alert manager
 # Create  a new file
+
+```
 vim /etc/alertmanager/alertmanager.yml
 
 global:
@@ -89,10 +91,10 @@ receivers:
     channel: '#prometheus-course'
     send_resolved: true
 
-
+```
 # Do Necessary Edits to Prometheus config file
 
-
+```
 
 vim /etc/prometheus/prometheus.yml
 alerting:
@@ -103,15 +105,7 @@ alerting:
 
 service prometheus restart
 service prometheus status
-
-
 ```
 
 
-```
 
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
-echo "$(<kubectl.sha256)  kubectl" | sha256sum --check
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-kubectl version --client --output=yaml
