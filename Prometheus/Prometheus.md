@@ -46,10 +46,10 @@ curl localhost:9100 --> node exporter
 curl localhost:9100/metrics
 ```
 
+```
 scripts/install-docker.sh
 cd flask-prometheus
 docker-compose up -d
-
 
 localhost:5000 --> Flask server
 localhost:5000/query --> query
@@ -57,7 +57,7 @@ localhost:8000 --> monitoring
 
 #Run the script
 add-flask-app.sh
-
+```
 
 # Extra Suggested Activity
 
