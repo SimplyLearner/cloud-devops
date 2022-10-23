@@ -1,0 +1,11 @@
+# /etc/prometheus/alert.rules
+groups:
+- name : example
+  rules:
+  - alert: cpuUsge
+    expr: 100 - (avg by (instance) (irate(node_cpu_seconds_total{job='node_exporter',mode="idle"}[5m]))*100) > 95
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: Machine is under the heavy load
