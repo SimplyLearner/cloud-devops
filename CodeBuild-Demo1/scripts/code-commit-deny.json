@@ -1,0 +1,25 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+    {
+    "Effect": "Deny",
+    "Action": [
+    "codecommit:GitPush",
+    "codecommit:DeleteBranch",
+    "codecommit:PutFile",
+    "codecommit:MergePullRequestByFastForward"
+    ],
+    "Resource": "arn:aws:codecommit:ap-south-1:957695831863:sdlc-edureka",
+    "Condition": {
+    "StringEqualsIfExists": {
+    "codecommit:References": [
+    "refs/heads/main"
+    ]
+    },
+    "Null": {
+    "codecommit:References": false
+    }
+    }
+    }
+    ]
+   }
