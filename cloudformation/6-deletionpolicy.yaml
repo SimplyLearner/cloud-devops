@@ -4,7 +4,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     DeletionPolicy: Retain
     Properties:
-      GroupDescription: Enable SSH access via port 22
+      GroupDescription: RETAIN Enable SSH access via port 22
       SecurityGroupIngress:
       - CidrIp: 0.0.0.0/0
         FromPort: 22

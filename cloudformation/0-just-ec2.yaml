@@ -6,3 +6,4 @@ Resources:
       AvailabilityZone: ap-south-1a
       ImageId: ami-01216e7612243e0ef
       InstanceType: t2.micro
+      KeyName: code-pipeline-v2
