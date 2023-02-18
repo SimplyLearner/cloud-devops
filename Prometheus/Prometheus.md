@@ -14,10 +14,9 @@ sudo service prometheus status
 cat /etc/prometheus/prometheus.yml
 
 ./3-install-grafana.sh
-
-
 sudo service grafana-server status
 
+# default username & password is : admin
 
 ps uax | grep prometheus
 
@@ -37,6 +36,7 @@ vim /etc/prometheus/prometheus.yml
       - targets: ['localhost:9100']
 
 
+sudo service prometheus restart
 ```
 
 
@@ -46,9 +46,11 @@ localhost:3000 --> grafana
 curl localhost:9100 --> node exporter
 curl localhost:9100/metrics
 ```
+https://pypi.org/project/prometheus-client/
 
 ```
-scripts/install-docker.sh
+./install-docker.sh
+cd ..
 cd flask-prometheus
 docker-compose up -d
 
@@ -59,6 +61,8 @@ localhost:8000 --> monitoring
 #Run the script
 add-flask-app.sh
 
+
+sudo service prometheus restart
 
 docker ps
 ```
