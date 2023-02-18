@@ -8,7 +8,7 @@ header_text = '''
  <html>\n<head> <title> Docker Demo</title> </head>\n<body>'''
 
 instructions = '''
- <font color="white"><h2><em> Hey!!!! It is Working </h2></font>\n'''
+ <font color="white"><h2><em> Hey!!!! It is Working V2</h2></font>\n'''
 
 home_link = '<p><a href="/">Back</a></p>\n'
 footer_text = '</body>\n</html>'

@@ -1,6 +1,6 @@
 #Installation Steps for Prometheus
 - Launch an EC2 instance with Ubuntu and run the below commands
-- Open the traffic for all the ports
+- Open the traffic for all the ports (All Traffic - anywhere ipv4)
 
 ```
 sudo su -
@@ -11,6 +11,7 @@ ps aux | grep prometheus
 sudo service prometheus start
 sudo service prometheus status
 
+cat /etc/prometheus/prometheus.yml
 
 ./3-install-grafana.sh
 
@@ -57,7 +58,12 @@ localhost:8000 --> monitoring
 
 #Run the script
 add-flask-app.sh
+
+
+docker ps
 ```
+
+
 
 # Extra Suggested Activity
 
