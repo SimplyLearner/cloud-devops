@@ -42,3 +42,21 @@ sudo systemctl start nagios.service
 
 
 ```
+
+
+Nagios Installation:
+https://support.nagios.com/kb/article/nagios-core-installing-nagios-core-from-source-96.html#Ubuntu
+
+
+Username : nagiosadmin
+
+To open Nagios: <public ipv4 address>/nagios
+
+All files of Nagios : /usr/local/nagios/etc
+
+nagios.cfg → Main Configuration file of Nagios Core
+cgi.cfg → Contains the user and group information including its rights and permissions . This will also contain the path for all the front end files
+
+resources.cfg → To store the sensitive information like username, password
+
+Objects related to Configuration are stored under the : /usr/local/nagios/etc/objects
