@@ -25,3 +25,10 @@ aws s3api put-bucket-versioning --bucket aws-devops-edureka --versioning-configu
 ```
 aws deploy push --application-name web-server --s3-location s3://aws-devops-edureka/codedeploy-demo/app.zip --ignore-hidden-files --region ap-south-1
 ```
+
+
+# Metadata for EC2 :
+
+ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html
+
+ 
