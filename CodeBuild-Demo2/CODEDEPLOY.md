@@ -17,13 +17,15 @@ sudo service codedeploy-agent status
 # create a bucket and enable versioning
 - ensure u have configured cli on cmd prompt
 ```
-aws s3 mb s3://aws-devops-edureka --region ap-south-1 
+aws s3 mb s3://aws-devops-edureka-123123 --region ap-south-1 
 aws s3api put-bucket-versioning --bucket aws-devops-edureka --versioning-configuration Status=Enabled --region ap-south-1 
 ```
 
+# Create APplication in CodeDeploy with application name as : web-server
+
 # deploy the files into S3
 ```
-aws deploy push --application-name web-server --s3-location s3://aws-devops-edureka/codedeploy-demo/app.zip --ignore-hidden-files --region ap-south-1
+aws deploy push --application-name web-server --s3-location s3://aws-devops-edureka-123123/codedeploy-demo/app.zip --ignore-hidden-files --region ap-south-1
 ```
 
 

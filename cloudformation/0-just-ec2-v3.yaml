@@ -6,4 +6,9 @@ Resources:
       AvailabilityZone: ap-south-1a
       ImageId: ami-01216e7612243e0ef
       InstanceType: t2.micro
-      KeyName: <specify key pair>
+      KeyName: !Ref NewKeyPair
+
+  NewKeyPair:
+    Type: 'AWS::EC2::KeyPair'
+    Properties:
+      KeyName: MyKeyPair

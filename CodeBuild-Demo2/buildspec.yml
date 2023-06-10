@@ -23,4 +23,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-    - name:my-webpage-artifacts
+  name: my-webpage-artifacts
